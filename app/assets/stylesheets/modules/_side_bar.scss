@@ -1,0 +1,17 @@
+.sidebar {
+  background-color: #253141;
+  width: 300px;
+  float: left;
+  &__username{
+    background-color: #2f3e51;
+    height: 100px;
+    &__top-items {
+      
+    }
+  }
+  &__grouplist {
+    height: calc(100vh - 100px);
+  }
+
+}
+
