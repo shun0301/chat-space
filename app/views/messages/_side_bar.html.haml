@@ -1,6 +1,18 @@
-.sidebar
-  .sidebar__username
-    .sidebar__username__top-items
-      .sidebar__username__top-items__name
-      .sidebar__username__top-items__icons
-  .sidebar__grouplist
+.side-bar
+  .header
+    %h3.header__name
+      Shun
+      %ul.header__lists
+        %li.list
+          = link_to "#" do
+            = icon('far', 'edit', class: "icon")
+        %li.list
+          = link_to "#" do
+            = icon('fas', 'cog', class: "icon")
+  .groups
+    .group
+      %p.group__name
+        techcamp
+      %p.group__message
+        まだメッセージがありません
+
