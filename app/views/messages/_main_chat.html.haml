@@ -1,0 +1,39 @@
+.chat-main
+  .header
+    .header__left
+      %h2.group-name
+        test
+      %ul.group-list
+        Member : 
+        %li.list
+          Shun
+    .header__edit
+      = link_to "#", class: "header__edit__btn" do
+        Edit
+  .main
+    .message
+      .message__top
+        %p.user-name
+          Shun
+        %p.time
+          2020/02/25(tue) 12:45:02
+      .message__text
+        こんにちは
+    .message
+      .message__top
+        %p.user-name
+          Shun
+        %p.time
+          2020/02/25(tue) 12:50:02
+      .message__text
+        こんばんわ
+  .form
+    .text-area
+      %input.text-area__box{type: "text", placeholder: "type a message"}
+      %label{class: "text-area__image"}
+        = icon('far', 'image')
+        %input.text-area__image__file{type: "file"}
+    .submit
+      %input.submit__btn{type: "submit", value: "Send"}
+
+  
