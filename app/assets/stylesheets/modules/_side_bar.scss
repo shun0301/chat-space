@@ -28,17 +28,18 @@
 }
   .groups {
     height: calc(100vh - 100px);
-    color: white;
     margin-top: 20px;
     .group {
       padding: 0 20px;
       &__name {
         font-size: 15px;
         margin-bottom: 5px;
+        color: white;
       }
       &__message {
         font-size: 11px;
         margin-bottom: 40px;
+        color: white;
       }
     }
   }
