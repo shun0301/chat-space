@@ -2,38 +2,22 @@
   .header
     .header__left
       %h2.group-name
-        test
-      %ul.group-list
-        Member : 
-        %li.list
-          Shun
-    .header__edit
-      = link_to "#", class: "header__edit__btn" do
-        Edit
+        = @group.name
+      .group-list
+        Member :&nbsp
+        - @group.users.each do |user|
+          = user.name
+    .header__right
+      = link_to edit_group_path(@group) do
+        %p.btn Edit
   .main
-    .message
-      .message__top
-        %p.user-name
-          Shun
-        %p.time
-          2020/02/25(tue) 12:45:02
-      .message__text
-        こんにちは
-    .message
-      .message__top
-        %p.user-name
-          Shun
-        %p.time
-          2020/02/25(tue) 12:50:02
-      .message__text
-        こんばんわ
+    = render @messages
   .form
-    .text-area
-      %input.text-area__box{type: "text", placeholder: "type a message"}
-      %label{class: "text-area__image"}
-        = icon('far', 'image')
-        %input.text-area__image__file{type: "file"}
-    .submit
-      %input.submit__btn{type: "submit", value: "Send"}
-
-  
+    = form_for [@group, @message] do |f|
+      .text-area
+        = f.text_field :content, class: 'text-area__box', placeholder: 'type a message'
+        = f.label :image, class: 'text-area__image' do
+          = icon('far', 'image')
+          = f.file_field :image, class: 'text-area__image__file'
+        .submit
+          = f.submit 'Send', class: 'submit__btn'
