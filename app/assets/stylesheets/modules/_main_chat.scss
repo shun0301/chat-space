@@ -29,7 +29,9 @@
       margin-top: 30px;
       padding: 0 20px;
       text-align: center;
-      text-decoration: none;
+      a {
+        text-decoration: none;
+      }
       .btn {
         color: #38aef0;
         text-align: center;
@@ -41,8 +43,9 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 40px;
+    overflow: scroll;
     .message {
-      margin-bottom: 46px;
+      padding-bottom: 40px;
       &__top {
         padding-bottom: 12px;
         display: flex;
