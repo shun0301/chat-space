@@ -56,10 +56,12 @@ $('#new_message').on('submit', function(e){
        $('.main').append(html);      
        $('form')[0].reset();
        $('.main').animate({ scrollTop: $('.main')[0].scrollHeight});
-       $('.submit__btn').attr('disabled', false);
      })
      .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
+    })
+     .always(function(){
+      $('.submit__btn').attr('disabled', false);
     })
 })
 });
