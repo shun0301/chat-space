@@ -53,7 +53,7 @@ $('#new_message').on('submit', function(e){
     })
      .done(function(data){
        var html = buildHTML(data);
-       $('.main').append(html);      
+       $('.main').append(html);
        $('form')[0].reset();
        $('.main').animate({ scrollTop: $('.main')[0].scrollHeight});
      })
